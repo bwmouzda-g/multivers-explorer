@@ -1,4 +1,4 @@
-// src/components/CharacterCard.tsx
+
 import { useNavigate } from "react-router-dom";
 import type { Character } from "../types/character";
 
@@ -7,8 +7,8 @@ type Props = { character: Character };
 function CharacterCard({ character }: Props) {
   const navigate = useNavigate();
   const statusColor =
-    character.status === "Alive" ? "#4ade80" :
-    character.status === "Dead" ? "#f87171" : "#94a3b8";
+    character.status === "Vivant" ? "#4ade80" :
+    character.status === "Mort" ? "#f87171" : "#94a3b8";
 
   return (
     <div className="card" onClick={() => navigate(`/character/${character.id}`)}>

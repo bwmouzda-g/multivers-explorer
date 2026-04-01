@@ -1,4 +1,4 @@
-// src/components/Pagination.tsx
+
 type Props = {
   onPrev: () => void;
   onNext: () => void;

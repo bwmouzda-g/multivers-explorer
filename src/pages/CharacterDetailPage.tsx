@@ -1,4 +1,4 @@
-// src/pages/CharacterDetailPage.tsx
+
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -7,7 +7,7 @@ import { z } from "zod";
 import type { Character } from "../types/character";
 import { fetchCharacter } from "../services/characterApi";
 
-// ── Schéma Zod ───────────────────────────────────────────────────────────────
+// Partie Zod
 
 const reviewSchema = z.object({
   reviewer: z.string().min(3, "Minimum 3 caractères"),
@@ -28,7 +28,7 @@ const initialValues: ReviewForm = {
   comment: "",
 };
 
-// ── Composant ────────────────────────────────────────────────────────────────
+// Partie composant
 
 function CharacterDetailPage() {
   const { id } = useParams<{ id: string }>();

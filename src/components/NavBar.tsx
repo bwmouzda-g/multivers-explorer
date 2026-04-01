@@ -1,4 +1,4 @@
-// src/components/NavBar.tsx
+
 import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {

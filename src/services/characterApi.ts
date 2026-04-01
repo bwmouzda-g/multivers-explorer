@@ -1,4 +1,4 @@
-// src/services/characterApi.ts
+
 import type { ApiResponse, Character } from "../types/character";
 
 const BASE = "https://rickandmortyapi.com/api";
@@ -16,3 +16,8 @@ export async function fetchCharacter(id: string): Promise<Character> {
 }
 
 export const FIRST_PAGE = `${BASE}/character`;
+
+
+
+
+

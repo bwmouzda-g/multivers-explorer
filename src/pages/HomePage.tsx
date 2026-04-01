@@ -1,4 +1,4 @@
-// src/pages/HomePage.tsx
+
 import { useEffect, useState } from "react";
 import type { Character, ApiInfo } from "../types/character";
 import { fetchCharacters, FIRST_PAGE } from "../services/characterApi";
