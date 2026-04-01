@@ -55,8 +55,8 @@ function CharacterDetailPage() {
   };
 
   const statusColor =
-    character?.status === "Alive" ? "#4ade80" :
-    character?.status === "Dead" ? "#f87171" : "#94a3b8";
+    character?.status === "Vivant" ? "#4ade80" :
+    character?.status === "Mort" ? "#f87171" : "#94a3b8";
 
   if (loading) return <p className="state-msg">Chargement…</p>;
   if (error) return <p className="state-msg error">{error}</p>;

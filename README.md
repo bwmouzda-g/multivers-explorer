@@ -1,73 +1,131 @@
-# React + TypeScript + Vite
+# Multivers Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+J’ai réalisé ce projet dans le cadre de ma formation en développement full-stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Multivers Explorer est une application web qui permet d’explorer des personnages via une API. Le but était de mettre en pratique React avec TypeScript, ainsi que la gestion des routes et des appels API.
 
-## React Compiler
+Avec cette application, on peut :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Voir une liste de personnages
+* Naviguer entre plusieurs pages
+* Accéder au détail d’un personnage
+* écrire un avis sur un personnage dans un formulaire
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies utilisées
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* React
+* TypeScript
+* React Router
+* Vite
+* API REST
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+##  Structure du projet
+
+```
+src/
+ ├── components/
+ │   ├── CharacterCard.tsx
+ │   ├── NavBar.tsx
+ │   └── Pagination.tsx
+ │
+ ├── pages/
+ │   ├── HomePage.tsx
+ │   ├── CharacterDetailPage.tsx
+ │   └── NotFoundPage.tsx
+ │
+ ├── services/
+ │   └── characterApi.ts
+ |
+ |__types
+ |   └── character.ts
+ │
+ ├── App.tsx
+ └── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Cloner le projet :
+
+```bash
+git clone https://github.com/bwmouzda-g/multivers-explorer.git
 ```
+
+2. Aller dans le dossier :
+
+```bash
+cd multivers-explorer
+```
+
+3. Installer les dépendances :
+
+```bash
+npm install
+```
+
+4. Lancer le projet :
+
+```bash
+npm run dev
+```
+
+---
+
+##  Fonctionnalités
+
+### Liste des personnages
+
+J’ai mis en place un affichage dynamique des personnages grâce à une API.
+
+### Détail d’un personnage
+
+Chaque personnage a une page dédiée avec plus d’informations.
+
+### Pagination
+
+J’ai ajouté une pagination pour pouvoir naviguer facilement entre les pages.
+
+### Page 404
+
+Une page est prévue si l’utilisateur accède à une route inexistante.
+
+---
+
+## Ce que j’ai appris
+
+Avec ce projet, j’ai pu :
+
+* Comprendre comment structurer une application React
+* Utiliser TypeScript dans un projet concret
+* Gérer les routes avec React Router
+* Faire des appels API et gérer les données
+* Créer des composants réutilisables
+
+---
+
+## Améliorations possibles
+
+* Ajouter une barre de recherche
+* Ajouter des filtres
+* Améliorer le design
+* Ajouter un système de favoris
+
+---
+
+## Auteur
+
+Projet réalisé par moi dans le cadre de ma formation en développement web.
+
+---
+
+## Licence
+
+Projet à but pédagogique.
