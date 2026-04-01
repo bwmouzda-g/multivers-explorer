@@ -20,7 +20,7 @@ function HomePage() {
         setCharacters(data.results);
         setInfo(data.info);
       })
-      .catch((err) => setError(err.message || "Une erreur est survenue, réessayez."))
+      .catch((err) => setError(err.message || "Une erreur est survenue, veuillez réessayer."))
       .finally(() => setLoading(false));
   }, [currentUrl]);
 

@@ -127,7 +127,7 @@ function CharacterDetailPage() {
       <dialog ref={dialogRef} className="review-dialog">
         {submittedValues && (
           <>
-            <h3>✅ Évaluation enregistrée</h3>
+            <h3> Évaluation enregistrée</h3>
             <p><span>Nom :</span> {submittedValues.reviewer}</p>
             <p><span>Email :</span> {submittedValues.email}</p>
             <p><span>Note :</span> {submittedValues.rating} / 5</p>
